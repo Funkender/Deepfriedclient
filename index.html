@@ -1,51 +1,77 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <title>Deep Fried Client Download</title>
-  <style>
-    body {
-      font-family: sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      background: #0f172a;
-      color: #e2e8f0;
-    }
-    button {
-      padding: 14px 28px;
-      font-size: 18px;
-      border-radius: 10px;
-      border: none;
-      cursor: pointer;
-      background: #3b82f6;
-      color: white;
-      transition: 0.2s;
-    }
-    button:hover {
-      background: #2563eb;
-      transform: scale(1.05);
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overcooked Industrials – Offizielle Website</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Deep Fried Client</h1>
-  <p>Klicke auf den Button, um die Datei herunterzuladen.</p>
 
-  <button id="downloadBtn">Download</button>
+    <!-- Logo oben links -->
+    <div class="logo">
+        <img src="logo.png" alt="Mod Logo">
+    </div>
 
-  <script>
-    document.getElementById('downloadBtn').addEventListener('click', function () {
-      const fileUrl = "https://github.com/Overcooked-Industries/Deep-Fried-Client/releases/download/v1.0.3/deep_fried_client-1.0.3.jar";
-      const a = document.createElement('a');
-      a.href = fileUrl;
-      a.download = "deep_fried_client-1.0.3.jar"; 
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-    });
-  </script>
+    <header class="hero">
+        <div class="hero-content">
+            <h1 class="title glow">OVERCOOKED INDUSTRIALS</h1>
+            <p class="subtitle">Die ultimative Power‑Mod.</p>
+            <a href="#download" class="btn">Download</a>
+        </div>
+    </header>
+
+    <section class="section" id="features">
+        <h2>Features</h2>
+        <div class="features-grid">
+            <div class="feature-card fade-in">
+                <h3>🕊️ Fly</h3>
+                <p>Bewege dich frei durch die Welt ohne Grenzen.</p>
+            </div>
+            <div class="feature-card fade-in">
+                <h3>🌌 No‑Gravity</h3>
+                <p>Schalte die Schwerkraft komplett aus.</p>
+            </div>
+            <div class="feature-card fade-in">
+                <h3>🛡️ No‑Fall</h3>
+                <p>Kein Fallschaden mehr – egal aus welcher Höhe.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="screenshots">
+        <h2>Screenshots</h2>
+        <div class="gallery">
+            <img src="img1.jpg" class="fade-in" alt="Screenshot 1">
+            <img src="img2.jpg" class="fade-in" alt="Screenshot 2">
+            <img src="img3.jpg" class="fade-in" alt="Screenshot 3">
+        </div>
+    </section>
+
+    <section class="section" id="download">
+        <h2>Download</h2>
+        <p>Hol dir jetzt die neueste Version von Overcooked Industrials.</p>
+
+        <!-- FUNKTIONIERENDER DOWNLOAD BUTTON -->
+        <a class="btn"
+           href="https://github.com/Overcooked-Industries/Deep-Fried-Client/releases/download/v1.0.3/deep_fried_client-1.0.3.jar"
+           download>
+           Download Latest
+        </a>
+
+        <br><br>
+
+        <a class="btn secondary"
+           href="https://github.com/Overcooked-Industries/Deep-Fried-Client/releases"
+           target="_blank">
+           Older Versions
+        </a>
+    </section>
+
+    <footer>
+        <p>© 2026 Overcooked Industrials – Copyright friedbacon0</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
